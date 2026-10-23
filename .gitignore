@@ -1,0 +1,15 @@
+/build/
+/dist/
+/.cache/
+node_modules/
+__pycache__/
+*.pyc
+*.log
+*.tmp
+.env
+.env.*
+!.env.example
+*.pfx
+*.key
+.DS_Store
+Thumbs.db

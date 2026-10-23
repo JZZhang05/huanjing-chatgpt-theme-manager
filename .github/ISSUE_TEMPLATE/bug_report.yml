@@ -1,0 +1,26 @@
+name: 问题反馈
+description: 报告主题、安装或导入问题
+title: "[问题] "
+body:
+  - type: markdown
+    attributes:
+      value: 请不要提交账号、聊天记录、诊断目录、完整用户路径或访问令牌。
+  - type: input
+    id: versions
+    attributes:
+      label: 版本
+      description: Windows 版本、ChatGPT 客户端版本、幻景版本
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: 现象与复现步骤
+      description: 预期行为、实际行为、具体操作
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: 截图或补充信息
+      description: 截图请遮住聊天、账号和文件路径。

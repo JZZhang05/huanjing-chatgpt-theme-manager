@@ -1,0 +1,70 @@
+name: Checks and Windows installer
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python scripts/validate_source.py
+      - name: Parse Windows PowerShell scripts
+        if: runner.os == 'Windows'
+        shell: powershell
+        run: |
+          $failed = $false
+          Get-ChildItem src -Filter *.ps1 | ForEach-Object {
+            $tokens = $null
+            $parseErrors = $null
+            [System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$tokens, [ref]$parseErrors) | Out-Null
+            if ($parseErrors.Count) {
+              $parseErrors | Write-Output
+              $failed = $true
+            }
+          }
+          if ($failed) { exit 1 }
+  build:
+    needs: check
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: actions/cache@v4
+        with:
+          path: .cache
+          key: runtime-${{ runner.os }}-${{ hashFiles('scripts/dependencies.lock.json') }}
+      - name: Build verified public installer
+        run: python scripts/build.py
+      - name: Verify extraction and upgrade preservation
+        run: python scripts/verify_package.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Huanjing-Windows-x64
+          path: dist/*
+          if-no-files-found: error
+          retention-days: 14

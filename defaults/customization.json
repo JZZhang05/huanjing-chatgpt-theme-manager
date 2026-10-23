@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "themes": {
+    "original": {
+      "base": "#ded9e6",
+      "accent": "#806990",
+      "text": "#293644",
+      "panelTransparency": 33,
+      "maskStrength": 40,
+      "blur": 8
+    }
+  }
+}

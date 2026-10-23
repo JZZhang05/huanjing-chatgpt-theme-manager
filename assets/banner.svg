@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400">
+  <defs>
+    <linearGradient id="back" x2="1" y2="1"><stop stop-color="#e9dfd7"/><stop offset="1" stop-color="#d8cee8"/></linearGradient>
+    <linearGradient id="card" x2="1" y2="1"><stop stop-color="#faf7f5" stop-opacity=".94"/><stop offset="1" stop-color="#eee7f4" stop-opacity=".75"/></linearGradient>
+  </defs>
+  <rect width="1200" height="400" rx="28" fill="url(#back)"/>
+  <circle cx="1100" cy="40" r="210" fill="#aa8ebf" opacity=".13"/>
+  <circle cx="770" cy="370" r="180" fill="#8f5278" opacity=".09"/>
+  <g font-family="Segoe UI, Microsoft YaHei, sans-serif" fill="#293644">
+    <text x="76" y="120" font-size="20" letter-spacing="4" fill="#8f5278">HUANJING</text>
+    <text x="72" y="198" font-size="64" font-weight="600">幻景</text>
+    <text x="76" y="246" font-size="25">ChatGPT 主题管理器</text>
+    <text x="76" y="297" font-size="18" fill="#655e70">壁纸 · 配色 · 透明度</text>
+  </g>
+  <g transform="translate(632 64)">
+    <rect x="36" y="20" width="430" height="260" rx="22" fill="#7a668e" opacity=".13"/>
+    <rect width="430" height="260" rx="22" fill="url(#card)" stroke="#9c82ac" stroke-opacity=".3"/>
+    <path d="M100 0v260M0 38h430" stroke="#a391ad" stroke-opacity=".28"/>
+    <circle cx="20" cy="20" r="4" fill="#b990a8"/><circle cx="34" cy="20" r="4" fill="#c9b9d3"/>
+    <rect x="15" y="57" width="68" height="15" rx="7" fill="#8f5278" opacity=".18"/>
+    <rect x="15" y="87" width="58" height="6" rx="3" fill="#6f657b" opacity=".22"/>
+    <rect x="15" y="108" width="48" height="6" rx="3" fill="#6f657b" opacity=".22"/>
+    <rect x="124" y="65" width="208" height="8" rx="4" fill="#74667e" opacity=".4"/>
+    <rect x="124" y="86" width="252" height="6" rx="3" fill="#74667e" opacity=".2"/>
+    <rect x="124" y="103" width="224" height="6" rx="3" fill="#74667e" opacity=".2"/>
+    <rect x="124" y="145" width="190" height="6" rx="3" fill="#74667e" opacity=".2"/>
+    <rect x="124" y="162" width="244" height="6" rx="3" fill="#74667e" opacity=".2"/>
+    <rect x="122" y="199" width="284" height="44" rx="15" fill="#d9cbdc"/>
+    <circle cx="384" cy="221" r="12" fill="#8f5278"/>
+    <path d="m380 222 4-5 4 5m-4-5v9" stroke="#fff" stroke-width="1.7" fill="none"/>
+  </g>
+</svg>

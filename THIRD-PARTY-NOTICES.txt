@@ -1,0 +1,20 @@
+Huanjing (幻景) ChatGPT Theme Manager 1.1.0 - third-party components
+
+Node.js v24.21.0: runtime/LICENSE.txt (MIT and bundled notices).
+Python 3.13.17 embeddable x64: tools/python/LICENSE.txt (PSF and bundled notices).
+NumPy 2.2.6: tools/python/Lib/site-packages/numpy-2.2.6.dist-info/licenses/.
+OpenCV Python Headless 4.12.0.88: tools/python/Lib/site-packages/opencv_python_headless-4.12.0.88.dist-info/ (Apache 2.0 and bundled third-party notices).
+windows-capture 2.0.1: tools/python/Lib/site-packages/windows_capture-2.0.1.dist-info/ (MIT).
+
+FFmpeg is NOT included in this installer. On first new-wallpaper conversion,
+Ensure-ImportTools.ps1 downloads the unmodified Windows binary from the pinned
+imageio-ffmpeg 0.6.0 PyPI wheel and verifies the full archive SHA-256 before
+extraction. Download details and source links are in tools/ffmpeg-download.json.
+That downloaded binary is GPLv3; it is separately downloaded by the end user.
+imageio-ffmpeg project: https://github.com/imageio/imageio-ffmpeg
+FFmpeg source: https://ffmpeg.org/download.html
+FFmpeg build scripts: https://github.com/imageio/imageio-ffmpeg/tree/v0.6.0/binaries
+
+Third-party licenses are preserved with their original packages. Wallpapers
+have separate rights and source links in 壁纸来源.txt. This is an unofficial
+theme tool, not an OpenAI or Wallpaper Engine product.

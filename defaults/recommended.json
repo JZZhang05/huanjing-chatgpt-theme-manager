@@ -1,0 +1,13 @@
+{
+  "original": {
+    "name": "月雾淡紫",
+    "value": {
+      "base": "#ded9e6",
+      "accent": "#806990",
+      "text": "#293644",
+      "panelTransparency": 33,
+      "maskStrength": 40,
+      "blur": 8
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "huanjing-chatgpt-theme-manager",
+  "version": "1.1.0",
+  "private": true,
+  "description": "幻景 · 非官方 ChatGPT Windows 主题管理器",
+  "type": "module",
+  "license": "MIT",
+  "engines": {"node": ">=24"},
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "check": "python scripts/validate_source.py",
+    "build": "python scripts/build.py",
+    "verify-package": "python scripts/verify_package.py"
+  }
+}

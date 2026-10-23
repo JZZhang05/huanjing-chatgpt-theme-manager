@@ -1,0 +1,282 @@
+html[data-emilia-theme="on"][data-emilia-custom="on"]{
+  --color-token-main-surface-primary:var(--emilia-page)!important;
+  --color-token-main-surface-secondary:rgb(var(--emilia-panel))!important;
+  --color-token-main-surface-tertiary:var(--emilia-raised)!important;
+  --color-token-sidebar-surface-primary:rgb(var(--emilia-side))!important;
+  --color-token-side-bar-background:rgb(var(--emilia-side))!important;
+  --color-token-bg-primary:var(--emilia-page)!important;
+  --color-token-bg-secondary:var(--emilia-raised)!important;
+  --color-token-text-primary:var(--emilia-fg)!important;
+  --color-token-text-secondary:var(--emilia-muted)!important;
+  --color-token-text-tertiary:var(--emilia-muted)!important;
+  --color-token-accent:rgb(var(--emilia-accent))!important;
+  --color-token-border-light:rgba(var(--emilia-accent),.15)!important;
+  --color-token-border-medium:rgba(var(--emilia-accent),.25)!important;
+  --color-token-border-default:rgba(var(--emilia-accent),.17)!important;
+  --color-token-input-border:rgba(var(--emilia-accent),.25)!important;
+  --color-surface:var(--emilia-page)!important;
+  --color-surface-secondary:var(--emilia-raised)!important;
+  --color-surface-tertiary:var(--emilia-raised)!important;
+  --color-surface-card:rgb(var(--emilia-panel))!important;
+  --color-surface-elevated:rgba(var(--emilia-panel),.96)!important;
+  --color-surface-elevated-secondary:rgb(var(--emilia-panel))!important;
+  --color-text:var(--emilia-fg)!important;
+  --color-text-primary:var(--emilia-fg)!important;
+  --color-text-primary-outline:var(--emilia-fg)!important;
+  --color-text-primary-outline-hover:var(--emilia-fg)!important;
+  --color-text-primary-soft:var(--emilia-fg)!important;
+  --color-text-primary-soft-alt:var(--emilia-fg)!important;
+  --color-text-primary-surface:var(--emilia-fg)!important;
+  --color-text-primary-ghost:var(--emilia-fg)!important;
+  --color-text-primary-ghost-hover:var(--emilia-fg)!important;
+  --color-text-secondary:var(--emilia-muted)!important;
+  --color-text-secondary-solid:var(--emilia-muted)!important;
+  --color-text-secondary-soft:var(--emilia-muted)!important;
+  --color-text-secondary-soft-alt:var(--emilia-muted)!important;
+  --color-text-secondary-ghost:var(--emilia-muted)!important;
+  --color-text-tertiary:var(--emilia-muted)!important;
+  --color-text-disabled:var(--emilia-muted)!important;
+  --color-text-composer-primary:var(--emilia-fg)!important;
+  --color-text-user-message:var(--emilia-fg)!important;
+  --color-text-execution-output:var(--emilia-fg)!important;
+  --color-text-execution-output-label:var(--emilia-muted)!important;
+  --color-text-execution-traceback:var(--emilia-fg)!important;
+  --color-text-inverse:#fff!important;
+  --color-border:rgba(var(--emilia-accent),.18)!important;
+  --color-border-default:rgba(var(--emilia-accent),.18)!important;
+  --color-border-strong:rgba(var(--emilia-accent),.28)!important;
+  --color-border-primary-outline:rgba(var(--emilia-accent),.24)!important;
+  --color-border-secondary-outline:rgba(var(--emilia-accent),.24)!important;
+  --color-alpha:var(--emilia-fg)!important;
+  --color-background-primary-soft:rgba(var(--emilia-accent),.08)!important;
+  --color-background-primary-soft-hover:rgba(var(--emilia-accent),.12)!important;
+  --color-background-primary-soft-active:rgba(var(--emilia-accent),.16)!important;
+  --color-background-primary-soft-alpha:rgba(var(--emilia-accent),.06)!important;
+  --color-background-secondary-soft-alpha:rgba(var(--emilia-accent),.07)!important;
+  --color-background-secondary-soft-hover:rgba(var(--emilia-accent),.12)!important;
+  --color-background-secondary-soft-alpha-active:rgba(var(--emilia-accent),.16)!important;
+  --color-background-primary-outline-hover:rgba(var(--emilia-accent),.07)!important;
+  --color-background-primary-outline-active:rgba(var(--emilia-accent),.12)!important;
+  --color-background-secondary-outline-hover:rgba(var(--emilia-accent),.07)!important;
+  --color-background-segmented-selected:var(--emilia-raised)!important;
+  --color-background-segmented-selected-hover:var(--emilia-raised)!important;
+  --color-background-control-opaque:var(--emilia-raised)!important;
+  --color-background-composer-surface:rgb(var(--emilia-panel))!important;
+  --color-background-composer-action-bar:var(--emilia-raised)!important;
+  --color-background-execution-output:var(--emilia-raised)!important;
+  --color-background-user-message:var(--emilia-raised)!important;
+  --app-color-background-surface:var(--emilia-page)!important;
+  --app-color-background-surface-under:var(--emilia-raised)!important;
+  --app-color-background-shell:var(--emilia-page)!important;
+  --app-color-background-application-menu:rgb(var(--emilia-panel))!important;
+  --app-color-foreground-application-menu:var(--emilia-fg)!important;
+  --app-color-border-application-menu-separator:rgba(var(--emilia-accent),.2)!important;
+  --app-color-background-editor-opaque:var(--emilia-raised)!important;
+  --app-color-background-elevated-secondary:rgba(var(--emilia-accent),.04)!important;
+  --app-color-background-card:rgb(var(--emilia-panel))!important;
+  --app-color-text-primary:var(--emilia-fg)!important;
+  --app-color-text-secondary:var(--emilia-muted)!important;
+  --app-color-text-foreground:var(--emilia-fg)!important;
+  --app-color-text-foreground-secondary:var(--emilia-muted)!important;
+  --app-color-text-button-tertiary:var(--emilia-muted)!important;
+  --app-color-border:rgba(var(--emilia-accent),.2)!important;
+  --color-codex-application-menu:rgb(var(--emilia-panel))!important;
+  --color-codex-description:var(--emilia-muted)!important;
+  --color-codex-editor-inline-code-background:rgba(var(--emilia-accent),.09)!important;
+  --color-codex-syntax-comment:#6b6477!important;
+  --color-codex-syntax-keyword:#7345a6!important;
+  --color-codex-syntax-string:#26764a!important;
+  --color-codex-syntax-number:#a74c1c!important;
+  --color-codex-syntax-variable:#6651a5!important;
+  --color-codex-diff-surface:var(--emilia-page)!important;
+  --user-message-background-color:rgba(var(--emilia-accent),.1)!important;
+  --user-message-text-color:var(--emilia-fg)!important;
+  --chat-background-color:var(--emilia-page)!important;
+  --input-placeholder-text-color:var(--emilia-muted)!important;
+  --codeblock-background-color:var(--emilia-raised)!important;
+  --link-primary-text-color:var(--emilia-link)!important;
+  --scrollbar-color:rgba(var(--emilia-accent),.3)!important;
+  --menu-item-background-color:rgba(var(--emilia-accent),.1)!important;
+  --menu-separator-background-color:rgba(var(--emilia-accent),.18)!important;
+  --shadow-hairline-color:rgba(var(--emilia-accent),.14)!important;
+}
+
+html[data-emilia-theme="on"][data-emilia-custom="on"] body{background:var(--emilia-page)!important;color:var(--emilia-fg)!important}
+html[data-emilia-theme="on"][data-emilia-custom="on"] #emilia-wallpaper::after{background:linear-gradient(90deg,rgba(var(--emilia-panel),var(--emilia-mask-0)) 0%,rgba(var(--emilia-panel),var(--emilia-mask-1)) 36%,rgba(var(--emilia-panel),var(--emilia-mask-2)) 60%,rgba(var(--emilia-panel),var(--emilia-mask-3)) 75%,rgba(var(--emilia-panel),var(--emilia-mask-4)) 90%,rgba(var(--emilia-panel),var(--emilia-mask-5)))!important}
+html[data-emilia-theme="on"][data-emilia-custom="on"] aside.app-shell-left-panel{background:rgba(var(--emilia-side),var(--emilia-custom-alpha))!important;backdrop-filter:blur(var(--emilia-custom-blur))}
+html[data-emilia-theme="on"][data-emilia-custom="on"] :is([class*="_ApplicationMenuTopBar_"],header.app-header-tint,header[data-app-shell-header-edge-scroll],header[class*="_Header_"]){background:rgba(var(--emilia-panel),var(--emilia-custom-alpha))!important;backdrop-filter:blur(var(--emilia-custom-blur))!important;color:var(--emilia-fg)!important}
+html[data-emilia-theme="on"][data-emilia-custom="on"] :is([class*="_ComposerLayoutRoot_"],[data-testid="composer"],.composer-surface),html[data-emilia-theme="on"][data-emilia-custom="on"] [class~="group/summary-panel"]{background:rgba(var(--emilia-panel),var(--emilia-custom-alpha))!important;backdrop-filter:blur(var(--emilia-custom-blur))!important;border-color:rgba(var(--emilia-accent),.3)!important;box-shadow:0 8px 28px rgba(0,0,0,.08)!important}
+html[data-emilia-theme="on"][data-emilia-custom="on"] [class~="group/summary-panel"] header,html[data-emilia-theme="on"][data-emilia-custom="on"] [class~="group/summary-panel"] header::before{background:transparent!important}
+html[data-emilia-theme="on"][data-emilia-custom="on"] :is([role="dialog"],[role="menu"],[role="listbox"],[data-radix-popper-content-wrapper] > *){background:rgb(var(--emilia-panel))!important;color:var(--emilia-fg)!important}
+html[data-emilia-theme="on"][data-emilia-custom="on"] main :is(p,li,dt,dd,h1,h2,h3,h4,blockquote){color:var(--emilia-fg)!important;text-shadow:var(--emilia-custom-shadow)!important}
+html[data-emilia-theme="on"][data-emilia-custom="on"] :is(textarea,[contenteditable="true"]){color:var(--emilia-fg)!important;caret-color:var(--emilia-fg)!important}
+html[data-emilia-theme="on"][data-emilia-custom="on"] textarea::placeholder,html[data-emilia-theme="on"][data-emilia-custom="on"] .ProseMirror p.placeholder::before{color:var(--emilia-muted)!important}
+html[data-emilia-theme="on"][data-emilia-custom="on"] :is(.markdown,.prose,[class*="_Markdown_"]) pre{background:var(--emilia-raised)!important;color:var(--emilia-fg)!important}
+html[data-emilia-theme="on"][data-emilia-custom="on"] main [aria-hidden="true"][class*="_background_"][class*="_surface_"]{background:transparent!important}
+html[data-emilia-theme="on"][data-emilia-custom="on"] main [aria-hidden="true"][class*="_background_"][class*="_fade_"]{background:transparent!important}
+html[data-emilia-theme="on"][data-emilia-custom="on"] main button.bg-composer-primary{color:var(--emilia-on-accent)!important}
+
+/* The new-chat mode switch uses its own colors instead of the shared header. */
+html[data-emilia-theme="on"][data-emilia-custom="on"] [class~="@container/home-mode-toggle"] {
+  --color-text-mode-toggle-primary:var(--emilia-fg);
+  --color-text-mode-toggle-inactive:var(--emilia-muted);
+  --color-background-mode-toggle-track:rgba(var(--emilia-panel),var(--emilia-custom-alpha));
+  color:var(--emilia-fg)!important;
+}
+html[data-emilia-theme="on"][data-emilia-custom="on"] [class~="@container/home-mode-toggle"] .bg-background-mode-toggle-track {
+  background:rgba(var(--emilia-panel),var(--emilia-custom-alpha))!important;
+  backdrop-filter:blur(var(--emilia-custom-blur));
+  box-shadow:inset 0 0 0 1px rgba(var(--emilia-accent),.16);
+}
+html[data-emilia-theme="on"][data-emilia-custom="on"] [class~="@container/home-mode-toggle"] [role="group"] > [class*="_indicator_"] {
+  background:rgba(var(--emilia-accent),.18)!important;
+  box-shadow:inset 0 0 0 1px rgba(var(--emilia-accent),.4);
+}
+html[data-emilia-theme="on"][data-emilia-custom="on"] [class~="@container/home-mode-toggle"] button {
+  color:var(--emilia-muted)!important;
+  text-shadow:none!important;
+}
+html[data-emilia-theme="on"][data-emilia-custom="on"] [class~="@container/home-mode-toggle"] button:is([aria-pressed="true"],:hover,:focus-visible) {
+  color:var(--emilia-fg)!important;
+}
+html[data-emilia-theme="on"][data-emilia-custom="on"] [class~="@container/home-mode-toggle"] button[aria-pressed="true"] {
+  font-weight:600;
+}
+
+/* Shared component roles: dialogs, settings, profile and composer actions. */
+html[data-emilia-theme="on"][data-emilia-custom="on"] {
+  --color-background-panel:rgba(var(--emilia-panel),var(--emilia-elevated-alpha))!important;
+  --color-background-composer-primary:var(--emilia-action)!important;
+  --color-text-composer-reference:var(--emilia-link)!important;
+  --color-background-accent-action:var(--emilia-action)!important;
+  --color-text-accent-action:var(--emilia-on-accent)!important;
+  --color-background-primary-solid:var(--emilia-action)!important;
+  --color-background-primary-solid-hover:var(--emilia-action-hover)!important;
+  --color-background-primary-solid-active:var(--emilia-action-active)!important;
+  --color-text-primary-solid:var(--emilia-on-accent)!important;
+  --color-border-primary-solid:var(--emilia-action)!important;
+  --color-background-secondary-solid:var(--emilia-control)!important;
+  --color-background-secondary-solid-hover:var(--emilia-selected)!important;
+  --color-background-secondary-solid-active:rgba(var(--emilia-accent),.24)!important;
+  --color-background-primary-ghost-focus:rgba(var(--emilia-accent),.12)!important;
+  --color-background-primary-ghost-hover:rgba(var(--emilia-accent),.10)!important;
+  --color-background-primary-ghost-active:rgba(var(--emilia-accent),.18)!important;
+  --color-background-segmented-selected:var(--emilia-selected)!important;
+  --color-background-segmented-selected-hover:rgba(var(--emilia-accent),.22)!important;
+  --color-background-control-opaque:var(--emilia-control)!important;
+  --color-background-activity-control:var(--emilia-control)!important;
+  --color-background-activity-control-hover:var(--emilia-selected)!important;
+  --color-text-activity-control:var(--emilia-muted)!important;
+  --color-text-activity-control-active:var(--emilia-fg)!important;
+  --color-control-thumb-on-accent:var(--emilia-on-accent)!important;
+  --color-control-thumb-foreground:var(--emilia-fg)!important;
+  --color-text-mode-toggle-accent:var(--emilia-link)!important;
+  --color-token-focus-border:var(--emilia-focus)!important;
+  --color-token-interactive-border-focus:var(--emilia-focus)!important;
+  --color-ring:var(--emilia-focus)!important;
+  --color-ring-primary:var(--emilia-focus)!important;
+  --color-ring-primary-solid:var(--emilia-focus)!important;
+  --color-ring-primary-outline:var(--emilia-focus)!important;
+  --color-ring-primary-soft:var(--emilia-focus)!important;
+  --color-ring-primary-ghost:var(--emilia-focus)!important;
+  --color-ring-secondary:var(--emilia-focus)!important;
+  --color-ring-secondary-solid:var(--emilia-focus)!important;
+  --color-ring-secondary-outline:var(--emilia-focus)!important;
+  --color-ring-secondary-soft:var(--emilia-focus)!important;
+  --color-ring-secondary-ghost:var(--emilia-focus)!important;
+  --app-color-background-control:var(--emilia-control)!important;
+  --app-color-text-primary-solid:var(--emilia-on-accent)!important;
+  --app-color-background-accent:var(--emilia-action)!important;
+  --segmented-control-background:rgba(var(--emilia-accent),.08)!important;
+  --segmented-control-thumb-background:var(--emilia-selected)!important;
+  --segmented-control-option-highlight-background-color:var(--emilia-selected)!important;
+}
+
+html[data-emilia-theme="on"][data-emilia-custom="on"] :is(button.bg-composer-primary,[data-testid="send-button"]) {
+  background-color:var(--emilia-action)!important;
+  color:var(--emilia-on-accent)!important;
+}
+html[data-emilia-theme="on"][data-emilia-custom="on"] :is(button.bg-composer-primary,[data-testid="send-button"]):not(:disabled):not([aria-disabled="true"]):hover {
+  background-color:var(--emilia-action-hover)!important;
+}
+html[data-emilia-theme="on"][data-emilia-custom="on"] :is(button.bg-composer-primary,[data-testid="send-button"]):not(:disabled):not([aria-disabled="true"]):active {
+  background-color:var(--emilia-action-active)!important;
+}
+html[data-emilia-theme="on"][data-emilia-custom="on"] :is(button.bg-composer-primary,[data-testid="send-button"]):is(:disabled,[aria-disabled="true"]) {
+  background-color:var(--emilia-action-disabled)!important;
+  color:var(--emilia-fg-disabled)!important;
+}
+html[data-emilia-theme="on"][data-emilia-custom="on"] :is(button.bg-composer-primary,[data-testid="send-button"]) svg {
+  color:inherit!important;
+}
+html[data-emilia-theme="on"][data-emilia-custom="on"] :is(button.bg-composer-primary,[data-testid="send-button"]):focus-visible {
+  outline-color:var(--emilia-focus)!important;
+}
+html[data-emilia-theme="on"][data-emilia-custom="on"] :is(input[type="checkbox"],input[type="radio"],input[type="range"],progress) {
+  accent-color:var(--emilia-action);
+}
+
+/* State selectors retain the native switch's shape, animation and disabled state. */
+html[data-emilia-theme="on"][data-emilia-custom="on"] [role="switch"][aria-checked="true"] > span[aria-hidden="true"] {
+  background-color:var(--emilia-action)!important;
+}
+html[data-emilia-theme="on"][data-emilia-custom="on"] [role="switch"][aria-checked="false"] > span[aria-hidden="true"] {
+  background-color:rgba(var(--emilia-accent),.20)!important;
+  box-shadow:inset 0 0 0 1px rgba(var(--emilia-accent),.20);
+}
+html[data-emilia-theme="on"][data-emilia-custom="on"] [role="switch"][aria-checked="true"] .bg-control-thumb-on-accent {
+  background-color:var(--emilia-on-accent)!important;
+  border-color:var(--emilia-on-accent)!important;
+}
+html[data-emilia-theme="on"][data-emilia-custom="on"] [role="switch"][aria-checked="false"] .bg-control-thumb-on-accent {
+  background-color:var(--emilia-fg)!important;
+  border-color:var(--emilia-fg)!important;
+}
+
+/* Dense surfaces stay legible even when the wallpaper panels are transparent. */
+html[data-emilia-theme="on"][data-emilia-custom="on"] :is([role="dialog"],[role="menu"],[role="listbox"],[data-radix-popper-content-wrapper] > *) {
+  background-color:rgba(var(--emilia-panel),var(--emilia-elevated-alpha))!important;
+  backdrop-filter:blur(var(--emilia-custom-blur));
+}
+html[data-emilia-theme="on"][data-emilia-custom="on"] [class~="group/settings"] {
+  --color-background-panel:rgba(var(--emilia-panel),var(--emilia-elevated-alpha));
+  color:var(--emilia-fg);
+}
+html[data-emilia-theme="on"][data-emilia-custom="on"] :is([role="menuitem"],[role="option"]):is([data-highlighted],[aria-selected="true"],[data-state="open"]) {
+  background-color:rgba(var(--emilia-accent),.14)!important;
+}
+html[data-emilia-theme="on"][data-emilia-custom="on"] :is([role="tab"][aria-selected="true"],[class~="group/settings"] [aria-pressed="true"]) {
+  background-color:var(--emilia-selected)!important;
+  color:var(--emilia-fg)!important;
+}
+
+/* Profile empty-state artwork defines separate component-local variables. */
+html[data-emilia-theme="on"][data-emilia-custom="on"] svg:has([fill="var(--profile-illustration-surface)"]) {
+  --profile-illustration-surface:var(--emilia-control)!important;
+  --profile-illustration-placeholder:rgba(var(--emilia-accent),.14)!important;
+  --profile-illustration-label:var(--emilia-muted)!important;
+  --profile-illustration-skill-name:var(--emilia-muted)!important;
+  --profile-illustration-border:rgba(var(--emilia-accent),.28)!important;
+}
+html[data-emilia-theme="on"][data-emilia-custom="on"] svg:has([fill="var(--profile-illustration-surface)"]) [fill="#CDF3FF"] {
+  fill:var(--emilia-selected)!important;
+}
+html[data-emilia-theme="on"][data-emilia-custom="on"] svg:has([fill="var(--profile-illustration-surface)"]) [fill="#41CEF9"] {
+  fill:var(--emilia-action)!important;
+}
+
+/* Profile activity uses local inline aliases; leave unrelated chart series alone. */
+html[data-emilia-theme="on"][data-emilia-custom="on"] [role="img"][style*="--profile-usage-level-0"] {
+  --profile-usage-level-0:var(--emilia-activity-0)!important;
+  --profile-usage-level-1:var(--emilia-activity-1)!important;
+  --profile-usage-level-2:var(--emilia-activity-2)!important;
+  --profile-usage-level-3:var(--emilia-activity-3)!important;
+  --profile-usage-level-4:var(--emilia-activity-4)!important;
+}
+html[data-emilia-theme="on"][data-emilia-custom="on"] [class~="group/profile-section"] button[aria-pressed="true"] {
+  color:var(--emilia-link)!important;
+  font-weight:600;
+}
+html[data-emilia-theme="on"][data-emilia-custom="on"] [class~="group/profile-section"] button:focus-visible {
+  outline-color:var(--emilia-focus)!important;
+}
