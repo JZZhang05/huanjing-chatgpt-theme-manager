@@ -250,7 +250,7 @@ const probeSource = `(() => {
     applied:document.documentElement.dataset.emiliaTheme==='on'&&!!wall&&!!document.getElementById('emilia-style'),
     mode:document.documentElement.dataset.emiliaMode,variant:wall?.dataset.variant,mediaType:video?'video':'image',
     backgroundLoaded:video?video.readyState>=2&&video.videoWidth>0:!!image&&image.complete&&image.naturalWidth>0,
-    mediaPlaying:video?!video.paused&&!video.ended:null,mediaTime:video?.currentTime??null,
+    mediaPlaying:video?!video.paused&&!video.ended:null,mediaTime:video?.currentTime??null,documentHidden:document.hidden,
     mediaWidth:video?.videoWidth??image?.naturalWidth,mediaHeight:video?.videoHeight??image?.naturalHeight,
     mediaError:video?.error?.code??null,pointerSafe:!!wall&&getComputedStyle(wall).pointerEvents==='none',
     expectedVideo:!!wall&&wall.dataset.mediaType==='video'&&!!main&&document.querySelectorAll('button,textarea,[contenteditable=true]').length>20,
@@ -322,10 +322,10 @@ async function makePayload(override) {
       if(!animate&&media){media.pause();media.removeAttribute('src');media.load();media.remove();media=null;}
       if(animate&&!media){
         media=document.createElement('video');
-        media.muted=true;media.defaultMuted=true;media.loop=true;media.autoplay=true;media.playsInline=true;
+        media.muted=true;media.defaultMuted=true;media.loop=true;media.autoplay=!document.hidden;media.playsInline=true;
         media.preload='auto';media.disablePictureInPicture=true;media.tabIndex=-1;
         media.setAttribute('aria-hidden','true');media.setAttribute('muted','');media.setAttribute('playsinline','');
-        media.dataset.emiliaAsset=source;wall.append(media);if(window.__emiliaAssets?.[source]){media.src=window.__emiliaAssets[source];media.play().catch(()=>{});}else window.__emiliaRequestAsset?.(source);
+        media.dataset.emiliaAsset=source;wall.append(media);if(window.__emiliaAssets?.[source]){media.src=window.__emiliaAssets[source];if(!document.hidden)media.play().catch(()=>{});}else window.__emiliaRequestAsset?.(source);
       }
       if(window.__emiliaVisibilityHandler)document.removeEventListener('visibilitychange',window.__emiliaVisibilityHandler);
       window.__emiliaVisibilityHandler=()=>{const current=document.querySelector('#emilia-wallpaper video');if(!current)return;if(document.hidden)current.pause();else current.play().catch(()=>{});};
@@ -466,7 +466,7 @@ async function watch(expectedBrowser) {
           reports.push({id: target.id, ...probe});
         } catch (error) {client?.close(); sessions.delete(target.id); reports.push({id: target.id, error: error.message});}
       }
-      const passed = reports.some(report=>selection.type==='native'?(report.nativeDefault&&report.mainVisible&&report.interactiveControls>20):report.applied&&report.backgroundLoaded&&report.pointerSafe&&report.mainVisible&&report.interactiveControls>20&&!report.horizontalOverflow&&(selection.type!=='video'||(report.mediaType==='video'&&report.mediaPlaying)));
+      const passed = reports.some(report=>selection.type==='native'?(report.nativeDefault&&report.mainVisible&&report.interactiveControls>20):report.applied&&report.backgroundLoaded&&report.pointerSafe&&report.mainVisible&&report.interactiveControls>20&&!report.horizontalOverflow&&(selection.type!=='video'||(report.mediaType==='video'&&(report.mediaPlaying||report.documentHidden))));
       if(passed&&firstFrameMs===undefined)firstFrameMs=Math.round(performance.now()-startup);
       const reportKey=JSON.stringify(reports.map(({mediaTime,...stable})=>stable));
       if(changed||reportKey!==lastReportKey||Date.now()-lastReportAt>=5000){
@@ -497,7 +497,7 @@ async function provideAsset(client,params){
    if(![...document.querySelectorAll('#emilia-wallpaper [data-emilia-asset]')].some(media=>media.dataset.emiliaAsset===id))return false;
    window.__emiliaAssets??={};
    if(!window.__emiliaAssets[id]){const raw=atob(base64),bytes=new Uint8Array(raw.length);for(let i=0;i<raw.length;i++)bytes[i]=raw.charCodeAt(i);window.__emiliaAssets[id]=URL.createObjectURL(new Blob([bytes],{type:mime}));}
-   for(const media of document.querySelectorAll('#emilia-wallpaper [data-emilia-asset]')){if(media.dataset.emiliaAsset===id){media.src=window.__emiliaAssets[id];if(media.tagName==='VIDEO')media.play().catch(()=>{});}}
+   for(const media of document.querySelectorAll('#emilia-wallpaper [data-emilia-asset]')){if(media.dataset.emiliaAsset===id){media.src=window.__emiliaAssets[id];if(media.tagName==='VIDEO'&&!document.hidden)media.play().catch(()=>{});}}
    return true;
   }`,
   arguments:[{value:base64},{value:assets[id].mime},{value:id}],returnByValue:true
