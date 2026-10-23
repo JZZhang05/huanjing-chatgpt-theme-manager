@@ -53,9 +53,12 @@ def main():
     # Ship all custom source needed to inspect and rebuild the installer.
     source=PAYLOAD/'source'
     source.mkdir()
-    for directory in ['src','assets','defaults','installer','scripts','tests','docs']:
+    for directory in ['src','assets','defaults','installer','scripts','tests','docs','.github']:
+        if not (ROOT/directory).is_dir(): continue
         shutil.copytree(ROOT/directory,source/directory,ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
-    for name in ['config.json','package.json','LICENSE','README.md','THIRD-PARTY-NOTICES.txt']:
+    for name in ['config.json','package.json','LICENSE','README.md','THIRD-PARTY-NOTICES.txt',
+                 'SECURITY.md','PRIVACY.md','CHANGELOG.md','CONTRIBUTING.md','.gitignore','.gitattributes']:
+        if not (ROOT/name).is_file(): continue
         shutil.copy2(ROOT/name,source/name)
     files=[]
     for file in sorted(PAYLOAD.rglob('*')):
