@@ -4,6 +4,7 @@ import ast
 import json
 import re
 import subprocess
+import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 DIRECTORIES=['src','scripts','tests','defaults','assets','installer','docs','.github']
@@ -35,6 +36,7 @@ def main():
     assert catalog=={},'Public release must not contain unlicensed Workshop media'
     assert json.loads((ROOT/'defaults/background.json').read_text())['variant']=='original'
     result=subprocess.run(['node','--test',*[str(p) for p in sorted((ROOT/'tests').glob('*.test.mjs'))]],check=True)
+    subprocess.run([sys.executable,'-m','unittest','discover','-s',str(ROOT/'tests'),'-p','test_*.py'],check=True)
     print(json.dumps({'pass':True,'checkedFiles':len(files),'version':config['version']}))
 
 if __name__=='__main__': main()

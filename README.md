@@ -18,7 +18,7 @@
 ## 安装
 
 1. 安装并登录[新版官方 ChatGPT Windows 客户端](https://learn.chatgpt.com/docs/windows/windows-app)。
-2. 从 [Releases](https://github.com/JZZhang05/huanjing-chatgpt-theme-manager/releases) 下载 Huanjing-Setup-1.1.0.exe，选择独立安装目录，例如 D:\Huanjing。
+2. 从 [Releases](https://github.com/JZZhang05/huanjing-chatgpt-theme-manager/releases) 下载 Huanjing-Setup-1.1.1.exe，选择独立安装目录，例如 D:\Huanjing。
 3. 安装后在 ChatGPT 右下角打开「◈ 幻景」。首次接入可能需要正常重开应用，请先完成正在进行的操作。
 
 支持 Windows 10/11 x64、.NET Framework 4.8。安装包自带 Node.js 和 Python，无需另行配置。

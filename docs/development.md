@@ -61,7 +61,7 @@ runtime.mjs 将样式和可交互菜单注入已验证的应用页面，排除�
 3. 提交并推送代码。GitHub Actions 会自动执行同类检查。
 4. 使用 GitHub CLI 创建带版本标签的 Release，上传安装器、校验文件和许可说明。
 
-    gh release create v1.1.0 dist/* --title "幻景 1.1.0" --notes-file docs/releases/v1.1.0.md
+    gh release create v1.1.1 dist/* --title "幻景 1.1.1" --notes-file docs/releases/v1.1.1.md
 
 也可手动运行仓库的 Windows installer 工作流获取已验证的构建产物，再创建 Release。
 不要上传 build/、.cache/、用户安装目录、诊断日志、个人配色或工坊媒体。签名证书不存入仓库。

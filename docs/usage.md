@@ -1,6 +1,6 @@
 # 幻景 · 使用说明
 
-版本 1.1.0 · 公开发行版 · 2026-10-24
+版本 1.1.1 · 公开发行版 · 2026-10-24
 
 ## 安装与启用
 
@@ -10,7 +10,7 @@
 
 官方下载说明：https://learn.chatgpt.com/docs/windows/windows-app
 
-从 GitHub Releases 下载 Huanjing-Setup-1.1.0.exe，双击安装到独立目录，例如 D:\Huanjing。
+从 GitHub Releases 下载 Huanjing-Setup-1.1.1.exe，双击安装到独立目录，例如 D:\Huanjing。
 默认目录位于当前用户的本地应用目录。通常不需要管理员权限；Node.js、Python 已随包提供。
 保持“自动随 ChatGPT 启用主题”勾选；首次接入可能需要应用正常关闭并重开，请先完成正在进行的操作。
 
